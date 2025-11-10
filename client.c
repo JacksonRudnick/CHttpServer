@@ -34,5 +34,14 @@ int main(int argc, char** argv) {
     exit(EXIT_FAILURE);
   }
 
+  send(sock, "Hello, Server!", 14, 0);
+
+  free(addr);
+  free(addr_in);
+  free(addr_peer);
+  free(addr_peer_size);
+
+  close(sock);
+
   return 0;
 }
