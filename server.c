@@ -109,7 +109,7 @@ int main(int argc, char** argv) {
   if (strcmp(request.method, "GET") == 0) {
     struct Response* response = malloc(sizeof(struct Response));
 
-    char response_body_buffer[2048];
+    char response_body_buffer[1024];
     read_html_file("index.html", response_body_buffer,
                    sizeof(response_body_buffer));
 
